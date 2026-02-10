@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Negombo Bliss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            DEFAULT: '#006994',
+                            light: '#4facfe',
+                            dark: '#005274',
+                        },
+                        sand: {
+                            DEFAULT: '#f4e4bc',
+                            dark: '#d4c49c',
+                        },
+                        sunset: {
+                            DEFAULT: '#ff6b6b',
+                            light: '#ff8e8e',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .activity-card {
+            transition: all 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass transition-all" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-ocean-dark tracking-wide">
+                NEGOMBO<span class="text-sunset">BLISS</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-slate-700 hover:text-ocean-dark font-medium transition-colors">Home</a>
+                <a href="attractions.html"
+                    class="text-slate-700 hover:text-ocean-dark font-medium transition-colors">Attractions</a>
+                <a href="activities.html" class="text-ocean-dark font-bold font-medium transition-colors">Activities</a>
+                <a href="gallery.html"
+                    class="text-slate-700 hover:text-ocean-dark font-medium transition-colors">Gallery</a>
+                <a href="contact.html"
+                    class="px-5 py-2 bg-ocean hover:bg-ocean-dark text-white rounded-full transition-colors shadow-lg">Contact
+                    Us</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-ocean-dark focus:outline-none" id="mobile-menu-btn">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white shadow-xl absolute w-full left-0 top-full px-6 py-4 flex flex-col space-y-4"
+            id="mobile-menu">
+            <a href="index.html" class="text-slate-700 hover:text-ocean block">Home</a>
+            <a href="attractions.html" class="text-slate-700 hover:text-ocean block">Attractions</a>
+            <a href="activities.html" class="text-ocean font-bold block">Activities</a>
+            <a href="gallery.html" class="text-slate-700 hover:text-ocean block">Gallery</a>
+            <a href="contact.html" class="text-ocean font-bold block">Contact Us</a>
+        </div>
+    </nav>
+
+    <header
+        class="pt-32 pb-16 bg-gradient-to-r from-teal-500 to-ocean text-white relative h-[400px] flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2000&auto=format&fit=crop"
+            class="absolute inset-0 w-full h-full object-cover mix-blend-overlay">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-4 drop-shadow-lg">Adventures Await</h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">Make memories with these top-rated
+                experiences in Negombo.</p>
+        </div>
+    </header>
+
+    <section class="py-20 container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Activity 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm activity-card group">
+                <div class="h-56 overflow-hidden relative">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1540206395-688085723adb?q=80&w=1000&auto=format&fit=crop"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        alt="Boat Ride">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span
+                            class="bg-ocean/10 text-ocean text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Water</span>
+                        <span class="text-slate-400 text-sm">2-3 Hours</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Lagoon Boat Safari</h3>
+                    <p class="text-slate-600 text-sm mb-4 line-clamp-3">Explore the mangroves and witness traditional
+                        fishing methods. A peaceful journey through nature's best kept secrets.</p>
+                    <button
+                        class="w-full py-2 border border-ocean text-ocean font-semibold rounded-lg hover:bg-ocean hover:text-white transition-colors">Book
+                        Now</button>
+                </div>
+            </div>
+
+            <!-- Activity 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm activity-card group">
+                <div class="h-56 overflow-hidden relative">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000&auto=format&fit=crop"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        alt="Diving">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span
+                            class="bg-ocean/10 text-ocean text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Adventure</span>
+                        <span class="text-slate-400 text-sm">Half Day</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Scuba Diving</h3>
+                    <p class="text-slate-600 text-sm mb-4 line-clamp-3">Discover the 'Third Reef' located 22km offshore.
+                        Rich with marine life including rays, fish, and vibrant corals.</p>
+                    <button
+                        class="w-full py-2 border border-ocean text-ocean font-semibold rounded-lg hover:bg-ocean hover:text-white transition-colors">Book
+                        Now</button>
+                </div>
+            </div>
+
+            <!-- Activity 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm activity-card group">
+                <div class="h-56 overflow-hidden relative">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1596734006240-62164f9f6eeb?q=80&w=2000&auto=format&fit=crop"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        alt="Cycling">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span
+                            class="bg-green-100 text-green-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Land</span>
+                        <span class="text-slate-400 text-sm">4 Hours</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">City Cycling Tour</h3>
+                    <p class="text-slate-600 text-sm mb-4 line-clamp-3">Ride through the fishing villages, coconut
+                        plantations, and historic canals. A great way to see the real Negombo.</p>
+                    <button
+                        class="w-full py-2 border border-ocean text-ocean font-semibold rounded-lg hover:bg-ocean hover:text-white transition-colors">Book
+                        Now</button>
+                </div>
+            </div>
+
+            <!-- Activity 4 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm activity-card group">
+                <div class="h-56 overflow-hidden relative">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?q=80&w=1000&auto=format&fit=crop"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        alt="Canal Tour">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span
+                            class="bg-ocean/10 text-ocean text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Historical</span>
+                        <span class="text-slate-400 text-sm">2 Hours</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Hamilton Canal Tour</h3>
+                    <p class="text-slate-600 text-sm mb-4 line-clamp-3">Glide through the historic Dutch canal network
+                        that connects Negombo to Colombo. A serene and scenic route.</p>
+                    <button
+                        class="w-full py-2 border border-ocean text-ocean font-semibold rounded-lg hover:bg-ocean hover:text-white transition-colors">Book
+                        Now</button>
+                </div>
+            </div>
+
+            <!-- Activity 5 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm activity-card group">
+                <div class="h-56 overflow-hidden relative">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1517505193072-a08b671a5c6d?q=80&w=1000&auto=format&fit=crop"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        alt="Cooking">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span
+                            class="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Cultural</span>
+                        <span class="text-slate-400 text-sm">3 Hours</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Seafood Cooking Class</h3>
+                    <p class="text-slate-600 text-sm mb-4 line-clamp-3">Buy fresh catch from the market and learn to
+                        cook traditional Negombo prawn curry with a local family.</p>
+                    <button
+                        class="w-full py-2 border border-ocean text-ocean font-semibold rounded-lg hover:bg-ocean hover:text-white transition-colors">Book
+                        Now</button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-serif font-bold mb-4">NEGOMBO<span class="text-sunset">BLISS</span></h2>
+            <div class="flex justify-center space-x-6 mb-8 text-sm text-slate-400">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="attractions.html" class="hover:text-white">Attractions</a>
+                <a href="activities.html" class="hover:text-white">Activities</a>
+                <a href="gallery.html" class="hover:text-white">Gallery</a>
+                <a href="contact.html" class="hover:text-white">Contact</a>
+            </div>
+            <p class="text-slate-500 text-sm">&copy; 2024 Negombo Bliss. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
