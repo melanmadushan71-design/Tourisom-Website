@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,8 @@
                         serif: ['Playfair Display', 'serif'],
                     },
                     backgroundImage: {
-                        'hero-pattern': "url('https://images.unsplash.com/photo-1584968173163-54876b53995f?q=80&w=2070&auto=format&fit=crop')", // Placeholder for now, beautiful beach
+                        // CHANGE HERO IMAGE HERE: Replace the URL inside the quotes below
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1584968173163-54876b53995f?q=80&w=2070&auto=format&fit=crop')",
                     }
                 }
             }
@@ -37,7 +39,9 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <style>
         .glass {
             background: rgba(255, 255, 255, 0.1);
@@ -45,18 +49,22 @@
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
         .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+
         html {
             scroll-behavior: smooth;
         }
     </style>
 </head>
+
 <body class="bg-slate-50 font-sans text-slate-800">
 
     <!-- Navigation -->
@@ -65,25 +73,32 @@
             <a href="index.html" class="text-2xl font-serif font-bold text-ocean-dark tracking-wide">
                 NEGOMBO<span class="text-sunset">BLISS</span>
             </a>
-            
+
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="index.html" class="text-slate-700 hover:text-ocean-dark font-medium transition-colors">Home</a>
-                <a href="attractions.html" class="text-slate-700 hover:text-ocean-dark font-medium transition-colors">Attractions</a>
-                <a href="activities.html" class="text-slate-700 hover:text-ocean-dark font-medium transition-colors">Activities</a>
-                <a href="gallery.html" class="text-slate-700 hover:text-ocean-dark font-medium transition-colors">Gallery</a>
-                <a href="contact.html" class="px-5 py-2 bg-ocean hover:bg-ocean-dark text-white rounded-full transition-colors shadow-lg">Contact Us</a>
+                <a href="attractions.html"
+                    class="text-slate-700 hover:text-ocean-dark font-medium transition-colors">Attractions</a>
+                <a href="activities.html"
+                    class="text-slate-700 hover:text-ocean-dark font-medium transition-colors">Activities</a>
+                <a href="gallery.html"
+                    class="text-slate-700 hover:text-ocean-dark font-medium transition-colors">Gallery</a>
+                <a href="contact.html"
+                    class="px-5 py-2 bg-ocean hover:bg-ocean-dark text-white rounded-full transition-colors shadow-lg">Contact
+                    Us</a>
             </div>
 
             <!-- Mobile Menu Button -->
             <button class="md:hidden text-ocean-dark focus:outline-none" id="mobile-menu-btn">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
-        
+
         <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white shadow-xl absolute w-full left-0 top-full px-6 py-4 flex flex-col space-y-4" id="mobile-menu">
+        <div class="md:hidden hidden bg-white shadow-xl absolute w-full left-0 top-full px-6 py-4 flex flex-col space-y-4"
+            id="mobile-menu">
             <a href="index.html" class="text-slate-700 hover:text-ocean block">Home</a>
             <a href="attractions.html" class="text-slate-700 hover:text-ocean block">Attractions</a>
             <a href="activities.html" class="text-slate-700 hover:text-ocean block">Activities</a>
@@ -97,7 +112,7 @@
         <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center">
             <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/20"></div>
         </div>
-        
+
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto" data-aos="fade-up">
             <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 text-shadow tracking-tight">
                 Welcome to <span class="text-sand">Little Rome</span>
@@ -106,19 +121,22 @@
                 Experience the golden sands, vibrant culture, and timeless charm of Negombo, Sri Lanka.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="attractions.html" class="px-8 py-3 bg-ocean hover:bg-ocean-dark text-white rounded-full transition-all transform hover:scale-105 shadow-lg text-lg font-medium border-2 border-transparent">
+                <a href="attractions.html"
+                    class="px-8 py-3 bg-ocean hover:bg-ocean-dark text-white rounded-full transition-all transform hover:scale-105 shadow-lg text-lg font-medium border-2 border-transparent">
                     Explore Attractions
                 </a>
-                <a href="activities.html" class="px-8 py-3 bg-transparent hover:bg-white/20 text-white border-2 border-white rounded-full transition-all transform hover:scale-105 shadow-lg text-lg font-medium backdrop-blur-sm">
+                <a href="activities.html"
+                    class="px-8 py-3 bg-transparent hover:bg-white/20 text-white border-2 border-white rounded-full transition-all transform hover:scale-105 shadow-lg text-lg font-medium backdrop-blur-sm">
                     Find Activities
                 </a>
             </div>
         </div>
-        
+
         <!-- Scroll Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+                </path>
             </svg>
         </div>
     </header>
@@ -129,8 +147,13 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
                     <div class="relative group">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-ocean to-sunset rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-                        <img src="https://images.unsplash.com/photo-1590666066225-b772cba271a3?q=80&w=1000&auto=format&fit=crop" alt="Negombo Fishing Boats" class="relative rounded-2xl shadow-xl w-full object-cover h-[400px]">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-ocean to-sunset rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+                        </div>
+                        <!-- CHANGE IMAGE HELPER: Replace the src="..." link with your own image URL or file path (e.g. src="images/my-photo.jpg") -->
+                        <img src="https://images.unsplash.com/photo-1590666066225-b772cba271a3?q=80&w=1000&auto=format&fit=crop"
+                            alt="Negombo Fishing Boats"
+                            class="relative rounded-2xl shadow-xl w-full object-cover h-[400px]">
                         <!-- Using Unsplash source for realistic Negombo vibe (fishing boats) -->
                     </div>
                 </div>
@@ -138,15 +161,22 @@
                     <span class="text-sunset font-bold tracking-wider uppercase text-sm">Discover Negombo</span>
                     <h2 class="text-4xl font-serif font-bold text-slate-800">Where History Meets the Ocean</h2>
                     <p class="text-slate-600 leading-relaxed text-lg">
-                        Negombo is a modest beach town located close to Bandaranaike International Airport. With a stash of decent hotels and restaurants to suit all pockets, a friendly local community, an interesting old quarter and a reasonable beach, Negombo is a much easier place to find your feet than Colombo.
+                        Negombo is a modest beach town located close to Bandaranaike International Airport. With a stash
+                        of decent hotels and restaurants to suit all pockets, a friendly local community, an interesting
+                        old quarter and a reasonable beach, Negombo is a much easier place to find your feet than
+                        Colombo.
                     </p>
                     <p class="text-slate-600 leading-relaxed text-lg">
-                        Known as "Little Rome" due to its bounty of Catholic churches, the town offers a rich cultural tapestry woven with colonial history and traditional fishing livelihoods.
+                        Known as "Little Rome" due to its bounty of Catholic churches, the town offers a rich cultural
+                        tapestry woven with colonial history and traditional fishing livelihoods.
                     </p>
-                    <a href="attractions.html" class="inline-flex items-center text-ocean font-semibold hover:text-ocean-dark group">
-                        Read More 
-                        <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    <a href="attractions.html"
+                        class="inline-flex items-center text-ocean font-semibold hover:text-ocean-dark group">
+                        Read More
+                        <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
                     </a>
                 </div>
@@ -165,40 +195,52 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover transition-all duration-300 group cursor-pointer" onclick="window.location.href='attractions.html#beach'">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover transition-all duration-300 group cursor-pointer"
+                    onclick="window.location.href='attractions.html#beach'">
                     <div class="h-64 overflow-hidden relative">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1620662243283-36cb9380927c?q=80&w=1000&auto=format&fit=crop" alt="Negombo Beach" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1620662243283-36cb9380927c?q=80&w=1000&auto=format&fit=crop"
+                            alt="Negombo Beach"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-serif font-bold text-slate-800 mb-2">Golden Beaches</h3>
-                        <p class="text-slate-600 mb-4">Relax on the expansive sandy shores of Negombo, perfect for sunset views and beach walks.</p>
+                        <p class="text-slate-600 mb-4">Relax on the expansive sandy shores of Negombo, perfect for
+                            sunset views and beach walks.</p>
                         <span class="text-ocean font-medium group-hover:underline">Explore Beach &rarr;</span>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover transition-all duration-300 group cursor-pointer" onclick="window.location.href='attractions.html#lagoon'">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover transition-all duration-300 group cursor-pointer"
+                    onclick="window.location.href='attractions.html#lagoon'">
                     <div class="h-64 overflow-hidden relative">
-                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1544983053-a55e2d836696?q=80&w=1000&auto=format&fit=crop" alt="Negombo Lagoon" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1544983053-a55e2d836696?q=80&w=1000&auto=format&fit=crop"
+                            alt="Negombo Lagoon"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-serif font-bold text-slate-800 mb-2">The Lagoon</h3>
-                        <p class="text-slate-600 mb-4">Discover the vast Negombo Lagoon, home to diverse wildlife and traditional fishing methods.</p>
+                        <p class="text-slate-600 mb-4">Discover the vast Negombo Lagoon, home to diverse wildlife and
+                            traditional fishing methods.</p>
                         <span class="text-ocean font-medium group-hover:underline">Explore Lagoon &rarr;</span>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover transition-all duration-300 group cursor-pointer" onclick="window.location.href='attractions.html#churches'">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover transition-all duration-300 group cursor-pointer"
+                    onclick="window.location.href='attractions.html#churches'">
                     <div class="h-64 overflow-hidden relative">
-                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1548625361-008aa28ef874?q=80&w=1000&auto=format&fit=crop" alt="St. Mary's Church" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1548625361-008aa28ef874?q=80&w=1000&auto=format&fit=crop"
+                            alt="St. Mary's Church"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <h3 class="text-2xl font-serif font-bold text-slate-800 mb-2">Historic Churches</h3>
-                        <p class="text-slate-600 mb-4">Admire the stunning architecture of St. Mary's Church and other colonial-era religious sites.</p>
+                        <p class="text-slate-600 mb-4">Admire the stunning architecture of St. Mary's Church and other
+                            colonial-era religious sites.</p>
                         <span class="text-ocean font-medium group-hover:underline">Explore History &rarr;</span>
                     </div>
                 </div>
@@ -209,12 +251,15 @@
     <!-- Call to Action -->
     <section class="py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-ocean-dark">
-             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop" alt="Ocean Background" class="w-full h-full object-cover opacity-20">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop"
+                alt="Ocean Background" class="w-full h-full object-cover opacity-20">
         </div>
         <div class="container mx-auto px-6 relative z-10 text-center">
             <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Ready to Experience Negombo?</h2>
-            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">Plan your perfect getaway with our curated guide to the best spots in town.</p>
-            <a href="contact.html" class="inline-block px-10 py-4 bg-white text-ocean-dark font-bold rounded-full hover:bg-sand transition-colors shadow-2xl text-lg hover:scale-105 transform duration-300">
+            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">Plan your perfect getaway with our curated guide to
+                the best spots in town.</p>
+            <a href="contact.html"
+                class="inline-block px-10 py-4 bg-white text-ocean-dark font-bold rounded-full hover:bg-sand transition-colors shadow-2xl text-lg hover:scale-105 transform duration-300">
                 Contact Us Today
             </a>
         </div>
@@ -229,28 +274,40 @@
                         NEGOMBO<span class="text-sunset">BLISS</span>
                     </a>
                     <p class="text-slate-400 max-w-sm leading-relaxed">
-                        Your ultimate guide to exploring the beauty, culture, and hospitality of Negombo, Sri Lanka. Discover the hidden gems of the Little Rome.
+                        Your ultimate guide to exploring the beauty, culture, and hospitality of Negombo, Sri Lanka.
+                        Discover the hidden gems of the Little Rome.
                     </p>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold mb-6 text-sand">Quick Links</h4>
                     <ul class="space-y-3">
                         <li><a href="index.html" class="text-slate-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="attractions.html" class="text-slate-400 hover:text-white transition-colors">Attractions</a></li>
-                        <li><a href="activities.html" class="text-slate-400 hover:text-white transition-colors">Activities</a></li>
-                        <li><a href="gallery.html" class="text-slate-400 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="attractions.html"
+                                class="text-slate-400 hover:text-white transition-colors">Attractions</a></li>
+                        <li><a href="activities.html"
+                                class="text-slate-400 hover:text-white transition-colors">Activities</a></li>
+                        <li><a href="gallery.html" class="text-slate-400 hover:text-white transition-colors">Gallery</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold mb-6 text-sand">Social</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-ocean transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-ocean transition-colors">
                             <span class="sr-only">Facebook</span>
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+                            </svg>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-ocean transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-ocean transition-colors">
                             <span class="sr-only">Instagram</span>
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -283,4 +340,5 @@
         });
     </script>
 </body>
+
 </html>
